@@ -23,3 +23,4 @@ class User(Base):
     projects = relationship("Project", back_populates="buyer", foreign_keys="Project.buyer_id")
     assigned_tasks = relationship("Task", back_populates="developer", foreign_keys="Task.developer_id")
     payments = relationship("Payment", back_populates="buyer", foreign_keys="Payment.buyer_id")
+    proposals = relationship("Proposal", back_populates="developer", foreign_keys="Proposal.developer_id")
